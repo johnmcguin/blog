@@ -1,7 +1,7 @@
 {
-	"name": "Astro Theme Cactus Demo",
-	"short_name": "Astro_Cactus",
-	"description": "Starter blog site for Astro",
+	"name": "Way Software Development Blog",
+	"short_name": "Way_Blog",
+	"description": "Technical Blog for The Way Software Development, LLC",
 	"icons": [
 		{
 			"src": "/192x192.png",

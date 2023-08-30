@@ -1,23 +1,22 @@
 ---
-import ThemeToggle from "../ThemeToggle.astro";
-import Search from "../Search.astro";
-import { menuLinks } from "@/site-config";
+import Search from '../Search.astro';
+import { menuLinks } from '@/site-config';
 
 const url = new URL(Astro.request.url);
 ---
 
 <script>
-	import { toggleClass } from "@/utils";
+	import { toggleClass } from '@/utils';
 
-	document.addEventListener("DOMContentLoaded", () => {
-		const header = document.getElementById("main-header") as HTMLElement;
-		const toggleMenuButton = document.getElementById("toggle-navigation-menu") as HTMLButtonElement;
+	document.addEventListener('DOMContentLoaded', () => {
+		const header = document.getElementById('main-header') as HTMLElement;
+		const toggleMenuButton = document.getElementById('toggle-navigation-menu') as HTMLButtonElement;
 		let menuOpen = false;
 
-		toggleMenuButton.addEventListener("click", () => {
-			toggleClass(header, "menu-open");
+		toggleMenuButton.addEventListener('click', () => {
+			toggleClass(header, 'menu-open');
 			menuOpen = !menuOpen;
-			toggleMenuButton.setAttribute("aria-expanded", menuOpen.toString());
+			toggleMenuButton.setAttribute('aria-expanded', menuOpen.toString());
 		});
 	});
 </script>
@@ -27,7 +26,7 @@ const url = new URL(Astro.request.url);
 		<a
 			href="/"
 			class="inline-flex items-center grayscale hover:filter-none sm:relative sm:inline-block"
-			aria-current={url.pathname === "/" ? "page" : false}
+			aria-current={url.pathname === '/' ? 'page' : false}
 		>
 			<svg
 				class="me-3 h-10 w-6 sm:absolute sm:start-[-4.5rem] sm:me-0 sm:h-20 sm:w-12"
@@ -61,7 +60,7 @@ const url = new URL(Astro.request.url);
 					<a
 						href={link.path}
 						class="px-4 py-4 sm:py-0 sm:hover:underline"
-						aria-current={url.pathname === link.path ? "page" : false}
+						aria-current={url.pathname === link.path ? 'page' : false}
 						rel="prefetch"
 					>
 						{link.title}
@@ -71,7 +70,6 @@ const url = new URL(Astro.request.url);
 		</nav>
 	</div>
 	<Search />
-	<ThemeToggle />
 	<button
 		id="toggle-navigation-menu"
 		class="group relative ms-4 h-7 w-7 sm:invisible sm:hidden"

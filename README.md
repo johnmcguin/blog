@@ -119,7 +119,7 @@ Edit `src/layouts/Base.astro`, and add:
 
 ```astro
 ---
-import { GoogleAnalytics } from "astro-google-analytics";
+import { GoogleAnalytics } from 'astro-google-analytics';
 // ...other imports
 ---
 

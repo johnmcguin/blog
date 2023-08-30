@@ -1,11 +1,11 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import type { CollectionEntry } from 'astro:content';
 
-import BaseLayout from "./Base.astro";
-import BlogHero from "@/components/blog/Hero";
+import BaseLayout from './Base.astro';
+import BlogHero from '@/components/blog/Hero';
 
 interface Props {
-	post: CollectionEntry<"post">;
+	post: CollectionEntry<'post'>;
 }
 
 const { post } = Astro.props;
@@ -19,8 +19,8 @@ const { headings } = await post.render();
 ---
 
 <script>
-	const scrollBtn = document.getElementById("to-top-btn") as HTMLButtonElement;
-	const targetHeader = document.getElementById("blog-hero") as HTMLDivElement;
+	const scrollBtn = document.getElementById('to-top-btn') as HTMLButtonElement;
+	const targetHeader = document.getElementById('blog-hero') as HTMLDivElement;
 
 	function callback(entries: IntersectionObserverEntry[]) {
 		entries.forEach((entry) => {
@@ -29,8 +29,8 @@ const { headings } = await post.render();
 		});
 	}
 
-	scrollBtn.addEventListener("click", () => {
-		document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+	scrollBtn.addEventListener('click', () => {
+		document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
 	});
 
 	const observer = new IntersectionObserver(callback);
@@ -47,11 +47,11 @@ const { headings } = await post.render();
 						{headings.map(({ depth, slug, text }) => (
 							<li class="line-clamp-2 hover:text-accent">
 								<a
-									class={`block ${depth <= 2 ? "mt-3" : "mt-2 ps-3 text-[0.6875rem]"}`}
+									class={`block ${depth <= 2 ? 'mt-3' : 'mt-2 ps-3 text-[0.6875rem]'}`}
 									href={`#${slug}`}
 									aria-label={`Scroll to section: ${text}`}
 								>
-									<span class="me-1">{"#".repeat(depth)}</span>
+									<span class="me-1">{'#'.repeat(depth)}</span>
 									{text}
 								</a>
 							</li>

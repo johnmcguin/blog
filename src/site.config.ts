@@ -1,23 +1,23 @@
-import type { SiteConfig } from "@/data/types";
+import type { SiteConfig } from '@/data/types';
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: "Chris Williams",
+	author: 'John McGuin',
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
-	title: "Astro Theme Cactus",
+	title: 'Way Software Blog',
 	// Meta property used as the default description meta property
-	description: "An opinionated starter theme for Astro",
+	description: 'Technical blog for Way Software Development, LLC',
 	// HTML lang property, found in src/layouts/Base.astro L:18
-	lang: "en-GB",
+	lang: 'en_US',
 	// Meta property, found in src/components/BaseHead.astro L:42
-	ogLocale: "en_GB",
+	ogLocale: 'en_US',
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
 	date: {
-		locale: "en-GB",
+		locale: 'en-US',
 		options: {
-			day: "numeric",
-			month: "short",
-			year: "numeric",
+			day: 'numeric',
+			month: 'short',
+			year: 'numeric',
 		},
 	},
 };
@@ -25,15 +25,15 @@ export const siteConfig: SiteConfig = {
 // Used to generate links in both the Header & Footer.
 export const menuLinks: Array<{ title: string; path: string }> = [
 	{
-		title: "Home",
-		path: "/",
+		title: 'Home',
+		path: '/',
 	},
 	{
-		title: "About",
-		path: "/about/",
+		title: 'About',
+		path: '/about/',
 	},
 	{
-		title: "Blog",
-		path: "/posts/",
+		title: 'Blog',
+		path: '/posts/',
 	},
 ];
