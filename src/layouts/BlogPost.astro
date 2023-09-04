@@ -16,27 +16,30 @@ const {
 const socialImage = ogImage ?? `/og-image/${slug}.png`;
 const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString();
 const { headings } = await post.render();
+console.log({ headings });
 ---
 
 <BaseLayout meta={{ title, description, articleDate, ogImage: socialImage }}>
 	<div class="gap-x-10 lg:flex lg:items-start">
+		<!-- table of contents -->
 		{
 			!!headings.length && (
 				<aside class="sticky top-20 order-2 -me-32 hidden basis-64 lg:block">
 					<h2 class="font-semibold">Table of Contents</h2>
 					<ul class="mt-4 text-xs">
-						{headings.map(({ depth, slug, text }) => (
-							<li class="line-clamp-2 hover:text-accent">
-								<a
-									class={`block ${depth <= 2 ? 'mt-3' : 'mt-2 ps-3 text-[0.6875rem]'}`}
-									href={`#${slug}`}
-									aria-label={`Scroll to section: ${text}`}
-								>
-									<span class="me-1">{'#'.repeat(depth)}</span>
-									{text}
-								</a>
-							</li>
-						))}
+						{headings
+							.filter(({ depth }) => depth === 2)
+							.map(({ slug, text }, i) => (
+								<li class="line-clamp-2 hover:text-accent">
+									<a
+										class={`mt-3 block font-semibold`}
+										href={`#${slug}`}
+										aria-label={`Scroll to section: ${text}`}
+									>
+										{i + 1}. {text}
+									</a>
+								</li>
+							))}
 					</ul>
 				</aside>
 			)
