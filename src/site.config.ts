@@ -18,22 +18,10 @@ export const siteConfig: SiteConfig = {
 			day: 'numeric',
 			month: 'short',
 			year: 'numeric',
+			timeZone: 'UTC',
 		},
 	},
 };
 
 // Used to generate links in both the Header & Footer.
-export const menuLinks: Array<{ title: string; path: string }> = [
-	// {
-	// 	title: 'Blog',
-	// 	path: '/',
-	// },
-	// {
-	// 	title: 'Home',
-	// 	path: '/',
-	// },
-	// {
-	// 	title: 'Blog',
-	// 	path: '/blog/',
-	// },
-];
+export const menuLinks: Array<{ title: string; path: string }> = [];

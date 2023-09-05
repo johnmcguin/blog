@@ -27,3 +27,7 @@ export function getUniqueTagsWithCount(posts: CollectionEntry<'post'>[] = []): {
 		return runningTags;
 	}, {});
 }
+
+export function isPublished(post: CollectionEntry<'post'>) {
+	return post.data.draft === false;
+}

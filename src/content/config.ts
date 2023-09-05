@@ -24,6 +24,7 @@ export const collections = {
 					.optional(),
 				tags: z.array(z.string()).default([]).transform(dedupe),
 				ogImage: z.string().optional(),
+				draft: z.boolean().default(true),
 			}),
 	}),
 };

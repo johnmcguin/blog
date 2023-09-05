@@ -28,7 +28,7 @@ console.log({ headings });
 					<h2 class="font-semibold">Table of Contents</h2>
 					<ul class="mt-4 text-xs">
 						{headings
-							.filter(({ depth }) => depth === 2)
+							.filter(({ depth }) => 2 >= depth)
 							.map(({ slug, text }, i) => (
 								<li class="line-clamp-2 hover:text-accent">
 									<a
@@ -44,10 +44,10 @@ console.log({ headings });
 				</aside>
 			)
 		}
-		<article class="flex-grow break-words" data-pagefind-body>
+		<article class="flex-grow break-words">
 			<div><BlogHero content={post} /></div>
 			<div
-				class="prose prose-sm prose-cactus mt-12 prose-headings:font-semibold prose-headings:before:absolute prose-headings:before:-ms-4 prose-headings:before:text-accent prose-headings:before:content-['#'] prose-th:before:content-none"
+				class="prose prose-sm prose-cactus mt-12 prose-headings:font-semibold prose-headings:before:absolute prose-headings:before:-ms-4 prose-headings:before:text-accent prose-th:before:content-none"
 			>
 				<slot />
 			</div>

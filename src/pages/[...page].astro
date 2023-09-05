@@ -6,9 +6,10 @@ import PageLayout from '@/layouts/Base';
 import PostPreview from '@/components/blog/PostPreview';
 import Pagination from '@/components/Paginator';
 import { sortMDByDate } from '@/utils';
+import { isPublished } from '../utils/post';
 
 export const getStaticPaths = (async ({ paginate }) => {
-	const allPosts = await getCollection('post');
+	const allPosts = await getCollection('post', isPublished);
 	const allPostsByDate = sortMDByDate(allPosts);
 	return paginate(allPostsByDate, { pageSize: 10 });
 }) satisfies GetStaticPaths;
