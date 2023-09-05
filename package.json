@@ -8,7 +8,6 @@
 		"sync": "astro sync",
 		"check": "astro check",
 		"build": "astro build",
-		"postbuild": "pagefind --source dist",
 		"preview": "astro preview",
 		"format": "prettier -w --plugin-search-dir=. --cache ."
 	},
