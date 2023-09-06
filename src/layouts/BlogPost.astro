@@ -16,7 +16,6 @@ const {
 const socialImage = ogImage ?? `/og-image/${slug}.png`;
 const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString();
 const { headings } = await post.render();
-console.log({ headings });
 ---
 
 <BaseLayout meta={{ title, description, articleDate, ogImage: socialImage }}>
