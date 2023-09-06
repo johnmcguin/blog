@@ -1,7 +1,7 @@
 ---
 title: 'Bitwarden CLI Search Utility'
 slug: 'bitwarden-cli-search-utility'
-description: 'Learn how to script a command line utility to search for items in the bitwarden cli using the jq package.'
+description: 'Learn how to script a command line utility to search for your passwords using the bitwarden cli and the jq package.'
 publishDate: 2023-09-05
 tags: ['recipe', 'cli', 'zsh']
 draft: false
