@@ -8,7 +8,6 @@ import { remarkReadingTime } from './src/utils/remark-reading-time.mjs';
 
 // https://astro.build/config
 export default defineConfig({
-	// ! Please remember to replace the following site property with your own domain
 	site: 'https://blog.waysoftware.dev',
 	markdown: {
 		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
@@ -22,7 +21,6 @@ export default defineConfig({
 		assets: true,
 	},
 	image: {
-		// https://docs.astro.build/en/guides/assets/#using-sharp
 		service: sharpImageService(),
 	},
 	integrations: [

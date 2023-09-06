@@ -1,4 +1,4 @@
 #!/bin/bash
 # create a new markdown blog post under the convention of 
-# timestamp (seconds from unix epoch)-name (1st argument) to the script
+# /content/post/{timestamp}-{name}/index.md
 mkdir "./src/content/post/$(date +%s)-$1" && touch "$_/index.md"
