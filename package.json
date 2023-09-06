@@ -17,7 +17,7 @@
 		"@astrojs/tailwind": "4.0.0",
 		"@resvg/resvg-js": "^2.4.1",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
-		"@tailwindcss/typography": "^0.5.8",
+		"@tailwindcss/typography": "^0.5.10",
 		"@types/eslint": "^8.40.2",
 		"@types/markdown-it": "^13.0.1",
 		"@types/prettier": "^2.7.3",
