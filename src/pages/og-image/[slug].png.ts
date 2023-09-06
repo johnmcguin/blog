@@ -69,11 +69,7 @@ export async function get({ params: { slug } }: APIContext) {
 	const post = await getEntryBySlug('post', slug!);
 	const title = post?.data.title ?? siteConfig.title;
 	const postDate = getFormattedDate(
-		post?.data.updatedDate ?? post?.data.publishDate ?? Date.now(),
-		{
-			weekday: 'long',
-			month: 'long',
-		}
+		post?.data.updatedDate ?? post?.data.publishDate ?? Date.now()
 	);
 	const svg = await satori(markup(title, postDate), ogOptions);
 	const png = new Resvg(svg).render().asPng();
