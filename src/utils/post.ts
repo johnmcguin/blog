@@ -29,5 +29,6 @@ export function getUniqueTagsWithCount(posts: CollectionEntry<'post'>[] = []): {
 }
 
 export function isPublished(post: CollectionEntry<'post'>) {
+	if (import.meta?.env?.DEV) return true;
 	return post.data.draft === false;
 }
