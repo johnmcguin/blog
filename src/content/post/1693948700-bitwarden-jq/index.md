@@ -11,6 +11,10 @@ draft: false
 
 I recently migrated to the Bitwarden password manager and discovered they have a first class command line interface. Since I almost always have a terminal open, I decided to adopt the cli over the macOS app for my core usage. My core problem is that the output is difficult to parse as an unformatted JSON string. I decided to reach [jq](https://jqlang.github.io/jq/) to help process the output for my core usecase of searching for a password by name.
 
+## Establish A Session
+
+All of the steps below will work but you will be prompted for you password every time. To establish a persistent session with the vault, [follow this tutorial](/blog/bitwarden-session)
+
 ## The API
 
 The API we are looking for here is `bw list items`. They already provide a handy helper to search the output with the `--search` flag. You can go more in depth here, filtering on organization, folders, etc, but for my usage I am generally looking to search across my entire vault. Let's explore this API briefly to see it in action. If we run the following command:
