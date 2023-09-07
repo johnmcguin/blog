@@ -5,12 +5,13 @@ import sitemap from '@astrojs/sitemap';
 import prefetch from '@astrojs/prefetch';
 import remarkUnwrapImages from 'remark-unwrap-images';
 import { remarkReadingTime } from './src/utils/remark-reading-time.mjs';
+import { remarkLastModified } from './src/utils/remark-modified-time.mjs'
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://blog.waysoftware.dev',
 	markdown: {
-		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
+		remarkPlugins: [remarkUnwrapImages, remarkReadingTime, remarkLastModified],
 		remarkRehype: { footnoteLabelProperties: { className: [''] } },
 		shikiConfig: {
 			theme: 'dracula',

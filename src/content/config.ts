@@ -15,7 +15,6 @@ export const collections = {
 				title: z.string().max(60),
 				description: z.string().min(50).max(160),
 				publishDate: z.date(),
-				updatedDate: z.date().optional(),
 				coverImage: z
 					.object({
 						src: image(),

@@ -2,8 +2,8 @@ import type { CollectionEntry } from 'astro:content';
 
 export function sortMDByDate(posts: CollectionEntry<'post'>[] = []) {
 	return posts.sort((a, b) => {
-		const aDate = new Date(a.data.updatedDate ?? a.data.publishDate).valueOf();
-		const bDate = new Date(b.data.updatedDate ?? b.data.publishDate).valueOf();
+		const aDate = new Date(a.data.publishDate).valueOf();
+		const bDate = new Date(b.data.publishDate).valueOf();
 		return bDate - aDate;
 	});
 }
