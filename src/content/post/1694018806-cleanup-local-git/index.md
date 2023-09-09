@@ -2,19 +2,16 @@
 title: 'Cleanup Local Git Branches'
 slug: 'cleanup-local-git'
 description: 'Learn how to clean up your local git branches for a given project.'
-publishDate: 2023-09-06
+publishDate: 2023-09-09
 tags: ['recipe', 'git']
-draft: true
 ---
-
-# Cleanup Local Git Branches
 
 If you've been developing on a project for a while, you are probably aggregating an ungodly amount of git branches locally. Here is a one liner to cleanup your merged branches:
 
 ```bash
 git branch --merged origin/master | grep -v 'master' | xargs git branch -d
 ```
-If your trunk / target branch is different, you can modify the command as needed, replacing the occurrences of `master` with your target branch. Let's step through the commands and see how they compose.
+If your trunk / target branch is different, you can modify the command as needed, replacing the occurrences of `master` with your target branch. Let's step through the commands and see how they compose together.
 
 ## List Merged Branches
 Here we're interested in local branches which have been merged into our production branch on the remote git repository.
@@ -61,4 +58,4 @@ we get
 Deleted branch continuous-deployment (was 86cfe6d).
 Deleted branch pg-migrate-cleanup (was 433f4d6).
 ```
-As you can see, each local branch was deleted. Hoozah!
+As you can see, each local branch was deleted - just what we were hoping for. Hopefully that will help keep your local repositories a little bit cleaner. This could also easily become a shell function for convenience's sake but I'll leave that as an exercise for the reader.
