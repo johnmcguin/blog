@@ -4,6 +4,7 @@ slug: 'cleanup-local-git'
 description: 'Learn how to clean up your local git branches for a given project.'
 publishDate: 2023-09-09
 tags: ['recipe', 'git']
+draft: false
 ---
 
 If you've been developing on a project for a while, you are probably aggregating an ungodly amount of git branches locally. Here is a one liner to cleanup your merged branches:
