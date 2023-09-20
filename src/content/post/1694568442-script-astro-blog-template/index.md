@@ -22,7 +22,7 @@ Pick a place to put your script(s). I usually like a `/scripts` directory. Make 
 ```bash
 mkdir ./scripts && touch $_/new-blog.sh
 ```
-The `$_` is a magical variable within the bash shell which holds the value of the last argument of the last command. So, in this example our `touch` command is `touch ./scripts/new-blog.sh. The script utilizes the `$_` magic as well so stick that in your back pocket for a sec.
+The `$_` is a magical variable within the bash shell which holds the value of the last argument of the last command. So, in this example our `touch` command is `touch ./scripts/new-blog.sh`. The script utilizes the `$_` magic as well so stick that in your back pocket for a sec.
 
 Take a peek at the script in whole, and then we will break it down into smaller pieces.
 ```bash
