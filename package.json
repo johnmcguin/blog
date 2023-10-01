@@ -54,7 +54,7 @@
 		"sanitize-html": "^2.11.0",
 		"satori": "0.10.4",
 		"satori-html": "^0.3.2",
-		"sharp": "^0.32.0"
+		"sharp": "^0.32.6"
 	},
 	"packageManager": "pnpm@8.6.1"
 }
