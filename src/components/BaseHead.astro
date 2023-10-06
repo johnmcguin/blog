@@ -12,6 +12,7 @@ const titleSeparator = '•';
 const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url).href;
+const { PROD } = import.meta.env;
 ---
 
 <meta charset="utf-8" />
@@ -66,3 +67,15 @@ const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url
 
 <!-- RSS auto-discovery -->
 <link rel="alternate" type="application/rss+xml" title={siteConfig.title} href="/rss.xml" />
+
+<!-- umami -->
+{
+	PROD && (
+	<script
+		defer
+		type="text/partytown"
+		src="https://analytics.eu.umami.is/script.js"
+		data-website-id="7f326116-ccdd-4534-890e-fc216682fc4b"
+	/>
+	)
+}

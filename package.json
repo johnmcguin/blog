@@ -46,6 +46,7 @@
 		"typescript": "^5.1.5"
 	},
 	"dependencies": {
+		"@astrojs/partytown": "^2.0.1",
 		"@astrojs/prefetch": "^0.4.0",
 		"@astrojs/rss": "^3.0.0",
 		"astro": "^3.2.0",
