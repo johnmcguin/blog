@@ -4,7 +4,7 @@ slug: 'better-navigation-zsh-cdpath'
 description: 'Shell enhancements for a better `cd` experience with ZSH cdpath environment variable'
 publishDate: 2024-01-10
 tags: ['recipe', 'zsh']
-draft: true
+draft: false
 ---
 
 In *nix systems, the `cd` command lets us navigate the filesystem. There are a few places that I visit most frequently though.
