@@ -10,6 +10,7 @@ draft: false
 # Establish A Session With The Bitwarden CLI
 
 Create a Bitwarden session in the terminal with one command:
+
 ```bash
 export BW_SESSION=$(bw unlock --raw)
 ```
