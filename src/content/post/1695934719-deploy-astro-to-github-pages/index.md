@@ -3,7 +3,7 @@ title: 'Deploy Astro To Github Pages'
 slug: 'deploy-astro-to-github-pages'
 description: 'Learn how to deploy your astro project to GitHub Pages on a custom subdomain'
 publishDate: 2023-09-28
-tags: ['recipe', 'astro']
+tags: ['how-to', 'astro']
 draft: false
 ---
 

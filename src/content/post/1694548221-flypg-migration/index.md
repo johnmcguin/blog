@@ -4,7 +4,7 @@ slug: 'migrate-pg-database'
 description:
   'Learn how to migrate a Fly.io PostgreSQL database to a Digital Ocean PostgreSQL Managed Database.'
 publishDate: 2023-09-12
-tags: ['recipe']
+tags: ['how-to']
 draft: false
 ---
 
