@@ -3,7 +3,7 @@ title: 'How To Use Virtual Environment In Jupyter Notebooks'
 slug: 'how-to-use-virtual-env-in-jupyter-notebook'
 description: 'How to use your Python virtual environment within Jupyter Notebooks'
 publishDate: 2023-10-06
-tags: ['how-to', 'python']
+tags: ['python']
 draft: false
 ---
 
