@@ -2,9 +2,9 @@
 title: 'Authenticated Requests From Shopify UI Extensions'
 slug: 'authenticated-requests-from-shopify-ui-extensions'
 description: 'How to make authenticated requests to your API within a Shopify UI extension.'
-publishDate: 2024-06-15
+publishDate: 2024-06-16
 tags: ['how-to', 'shopify']
-draft: true
+draft: false
 ---
 
 Shopify has a notion of
