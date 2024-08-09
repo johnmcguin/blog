@@ -7,7 +7,7 @@ tags: ['how-to']
 draft: false
 ---
 
-I have been working on a Shopify app called [File Vault Pro](https://filevaultpro.com) to offer a
+I have been working on a Shopify app called [File Vault Pro](https://filevaultpro.co) to offer a
 better experience selling digital goods on Shopify. For this app, I used the Shopify CLI to create a
 Remix BFF, while writing the core application server in Elixir / Phoenix. The Shopify CLI
 automatically configures the Shopify application environment and handles a dynamically named https
