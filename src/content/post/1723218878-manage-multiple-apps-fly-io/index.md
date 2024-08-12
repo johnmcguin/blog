@@ -2,7 +2,7 @@
 title: 'Managing Multiple Apps On Fly.io'
 slug: 'manage-multiple-apps-fly-io'
 description: 'How to manage multiple applications on Fly.io'
-publishDate: 2024-08-09
+publishDate: 2024-08-12
 tags: ['recipe', 'elixir']
 draft: false
 ---
