@@ -21,28 +21,56 @@ First, you'll need to clone the template repository to your own, working reposit
 
 ## Clone into repo
 
-Next, clone your new repository to your local dev machine. Documenting this step is out of scope for
-this post but well documented online or on GitHub.
-
-## Local edits
-
-The template repository provides the skeleton structure for a nice job application workflow, but it
-will not work out of the box. You need to do a couple of things to make this project work for you.
-First, you'll want to rename the `sites/unicorn-demo` directory to your own site. Make sure to
-update the package name in the `package.json` file as well. If you do a project wide search for
-'unicorn-demo', this should give you a list to work through and update. One of the updates will be
-the GitHub Action workflow found in `.github/workflows/publish.yml`. This workflow is the root of
-the template. At the heart of it is the
-[matrix property](https://github.com/johnmcguin/unicorn/blob/main/.github/workflows/publish.yml#L9-L20),
-which declares a mapping of local directories to project names in Cloudflare. We'll explain this in
-further detail later (LINK).
-
-With these changes in place, do an `npm install` at the root of the repo and try to run your new
-website by running
+Next, clone your new repository to your local dev machine and install dependencies.
 
 ```bash
-npm run dev -w ./sites/<your-site>
+npm install
 ```
+
+## Create a site
+
+The easiest way to create a site is to use the `npm run new` command. This is the basis of creating
+a new site based on the template site that lives at `sites/template`. You can consult the help docs
+by running `npm run new -- --help`. Take a minute to read the output.
+
+```bash
+$ npm run new -- --help
+
+> unicorn@0.1.0 new
+> scripts/new_site.mjs new --help
+
+Usage: Unicorn CLI new [options]
+
+Create a new website
+
+Options:
+  -d, --dir <name>      name of the directory
+  -j, --job <title>     job title you are applying for
+  -c, --company <name>  name of the company. This will be used in website copy.
+  -h, --help            display help for command
+```
+
+The options themselves should be fairly straightforward. What is happening behind the scenes is that
+the directory flag will make a copy of the template site and create a new site at
+`sites/<directory>`. The job and company flags will be used for text substitions throughout the
+website's copy. This should inform the copy that you write for your own version of the template
+site. The template site is meant to be customized! It is recommended to write the template site out
+to minimize the amount of work required after running the script. When customizing the template,
+there is an assumption that the script makes, which is that the template is substituting all
+instaces of the string "Company" with the value passed into the `--company` flag. It replaces all
+instances of the string "Job Title" with the `--job` flag. Write your template accordingly!
+Alternatively, you can customize the script to suit your exact needs. This is not meant to be a
+silver bullet but more of a starting off point for your own personal automations to this process.
+
+When you are done with the `npm run new` script, you have a new site! The output states how exactly
+to run your new site. The only manual steps that you have are to:
+
+1. Create a Cloudflare Pages project
+2. Add an entry to `sites.json` where the key is the directory name and its value is the name of the
+   Cloudlfare Pages project.
+3. Customize the site (resume, copy, etc) to the specific job application.
+4. Push and monitor the action to make sure the deployment was successful. If everything went right,
+   you should now have a new site live.
 
 ## Deployment
 
