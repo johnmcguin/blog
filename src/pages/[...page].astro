@@ -11,7 +11,7 @@ import { isPublished } from '../utils/post';
 export const getStaticPaths = (async ({ paginate }) => {
 	const allPosts = await getCollection('post', isPublished);
 	const allPostsByDate = sortMDByDate(allPosts);
-	return paginate(allPostsByDate, { pageSize: 10 });
+	return paginate(allPostsByDate, { pageSize: 50 });
 }) satisfies GetStaticPaths;
 
 interface Props {
